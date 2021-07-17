@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Customer {% endblock %}
+
+{% block body %}
+				<br>
+				<h1 style = "font-size : 40px"> Add Customer </h1>
+	
+				<form method = "POST" style="width: 40%;">
+				{% csrf_token %}
+				<div class="form-floating">
+					<input type="name" class="form-control" id="floatingName" name="name" required placeholder="Enter name" style="height: 80px;">
+					<label for="floatingName">Name</label>
+				</div>
+				<br>
+				<div class="form-floating mb-3">
+					<input type="email" class="form-control" id="floatingInput" name="email" required placeholder="Enter email" style="height: 80px;">
+					<label for="floatingInput">Email</label>
+				</div>
+				<div class="form-floating">
+					<input type="number" class="form-control" id="floatingBalance" name="balance" required placeholder="Enter balance" style="height: 80px;">
+					<label for="floatingBalance">Balance</label>
+				</div>
+				<br>
+				<input type = 'submit' class="btn btn-outline-dark btn-sm" value = 'Submit' style = "border-radius : 10px; width : 138px;">
+	
+		</form>
+		{{ msg }}
+	
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

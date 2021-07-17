@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Contact Us {% endblock %}
+
+{% block body %}
+
+<style>
+	.social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: white;
+  color: black;
+  line-height: 0;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 5px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #6b6b6b; justify-content: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+</style>
+
+<br>
+<h1 style = "font-size : 40px"> Contact Us </h1>
+<br>
+
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+    <img src="{% static 'images/1.jpg' %}" style="width:100%">
+	
+
+	<div style = "padding-left: 50px" class = "social-links">
+		<br>
+		<a href="https://www.linkedin.com/in/yash-shrivastav-580a991b0/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=+918286339660&text=Hi%21%21%21&app_absent=0" class="linkedin"><i class="fab fa-whatsapp"></i></a>
+	</div>
+
+</div>
+
+<div class="col-lg-6">
+    <h1 style = "font-size : 30px"> Send your feedback to developer </h1>
+    <form method="POST">
+        {% csrf_token %}
+				<div class="form-floating">
+					<input type="name" class="form-control" id="floatingName" name="name" required placeholder="Enter name" style="height: 80px;">
+					<label for="floatingName">Name</label>
+				</div>
+				<br>
+				<div class="form-floating mb-3">
+					<input type="email" class="form-control" id="floatingInput" name="email" required placeholder="Enter email" style="height: 80px;">
+					<label for="floatingInput">Email</label>
+				</div>
+				<div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" name="feedback" required  id="floatingTextarea2" style="height: 170px; resize: none;"></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                </div>
+				<br>
+				<input type = 'submit' class="btn btn-outline-dark btn-sm" value = 'Submit' style = "border-radius : 10px; width : 138px;">
+      </form>
+{{ msg }}
+</div>
+
+</div>
+</div>
+
+{% endblock %}

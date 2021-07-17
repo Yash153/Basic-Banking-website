@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} View Seleted {% endblock %}
+
+<style>
+
+
+</style>
+{% block body %}
+<br>
+
+<div class="container">
+		 	<!--<div class="row" >
+				<div class="col-lg-7">-->
+					<h1 style = "font-size : 35px" align=center> Details </h1>
+
+		<textarea readonly class="form-control form-control-sm" rows="1" cols="20" style="resize: none;width: 40%;">ID            :  {{ data.id }}</textarea><br>
+
+		<textarea readonly class="form-control form-control-sm" rows="1" cols="20" style="resize: none;width: 40%;">Name     :  {{ data.name }}</textarea><br>
+		  
+		<textarea readonly class="form-control form-control-sm" rows="1" cols="20" style="resize: none;width: 40%;">Email      :  {{ data.email }}</textarea><br>
+
+		<textarea readonly class="form-control form-control-sm" rows="1" cols="20" style="resize: none;width: 40%;">Balance   :  {{ data.balance }}</textarea><br>
+
+		
+		
+			<!--</div>
+				<div class="col-lg-5"><br>
+				<img src = "https://cdn.dribbble.com/users/4241563/screenshots/11874468/media/7796309c77cf752615a3f9062e6a3b3d.gif" style = "width: 500px; padding-right: 100px">
+		 		</div>
+			</div>
+		</div>-->
+
+
+{% endblock %}
